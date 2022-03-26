@@ -1,7 +1,12 @@
-public class Circle extends Shape{
+public class Circle extends Shape {
     private double radius = 1.0;
 
-    public Circle(){
+    public Circle() {
+    }
+
+    public Circle(double radius, String color){
+        this.radius = radius;
+        this.setColor(color);
     }
 
     public Circle(double radius) {
@@ -21,16 +26,16 @@ public class Circle extends Shape{
         this.radius = radius;
     }
 
-    public double getArea(){
-        return Math.PI * Math.pow(this.radius,2);
+    public double getArea() {
+        return Math.PI * Math.pow(this.radius, 2);
     }
 
-    public double getPerimeter(){
-        return 2*Math.PI*this.radius;
+    public double getPerimeter() {
+        return 2 * Math.PI * this.radius;
     }
 
     @Override
     public String toString() {
-        return "A Circle with radius = "+ getRadius() +" Which is a subclass of "+super.toString();
+        return "A Circle with radius = " + getRadius() + " Which is a subclass of " + super.toString();
     }
 }
