@@ -1,2 +1,3 @@
-package PACKAGE_NAME;public interface Resizeable {
+public interface Resizeable {
+    double resize(double percent);
 }

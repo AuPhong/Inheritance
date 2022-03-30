@@ -3,4 +3,6 @@ public abstract class Lop {
     void function(){
         System.out.println("/");
     }
+
+
 }

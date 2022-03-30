@@ -1,4 +1,4 @@
-public class Triangle  extends Shape{
+public class Triangle  extends Shape implements Resizeable{
     private double side1 =1;
     private double side2 =1;
     private double side3 =1;
@@ -14,6 +14,11 @@ public class Triangle  extends Shape{
         this.side1 = side1;
         this.side2 = side2;
         this.side3 = side3;
+    }
+
+    @Override
+    public double resize(double percent) {
+        return this.getArea()+this.getArea()*percent/50;
     }
 
     public Triangle() {
@@ -64,6 +69,7 @@ public class Triangle  extends Shape{
     public static void main(String[] args) {
         Triangle triangle = new Triangle(1,1,1);
         System.out.println(triangle);
+
         System.out.println(triangle.getArea());
     }
 }

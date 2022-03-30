@@ -1,4 +1,4 @@
-public class Rectangle extends Shape{
+public class Rectangle extends Shape implements Resizeable{
     double width = 1;
     double length = 1;
 
@@ -8,6 +8,11 @@ public class Rectangle extends Shape{
     public Rectangle(double width, double length) {
         this.width = width;
         this.length = length;
+    }
+
+    @Override
+    public double resize(double percent) {
+          return this.getArea()+this.getArea()*percent/100;
     }
 
     public Rectangle(String color, boolean filled, double width, double length) {

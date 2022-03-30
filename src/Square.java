@@ -1,4 +1,4 @@
-public class Square extends Rectangle{
+public class Square extends Rectangle implements Resizeable,Colorable{
     public Square() {
     }
 
@@ -14,9 +14,19 @@ public class Square extends Rectangle{
         return getWidth();
     }
 
+    @Override
+    public void howToColor() {
+        System.out.println("Color all four sides..");
+    }
+
     public void setSize(double size){
         setLength(size);
         setWidth(size);
+    }
+
+    @Override
+    public double getArea() {
+        return Math.pow(this.getSize(),2);
     }
 
     @Override
